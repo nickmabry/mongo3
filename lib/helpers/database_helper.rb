@@ -8,8 +8,8 @@ module DatabaseHelper
    
     def context_for( paths )
       case paths.size
-        when 2 : "zone"
-        when 3 : "database"
+        when 2 then "zone"
+        when 3 then "database"
         else     "collection"
       end      
     end    

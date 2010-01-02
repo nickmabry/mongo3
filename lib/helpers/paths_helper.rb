@@ -28,8 +28,8 @@ module PathHelper
     def title_for( path_names )
       tokens = path_names.split( "|" )
       buff = case tokens.size
-        when 2 : "zone"
-        when 3 : "database"
+        when 2 then "zone"
+        when 3 then "database"
         else     "collection"
       end
       db = tokens.size > 3 ? "<span class=\"ctx\">#{tokens[2]}</span>." : ""

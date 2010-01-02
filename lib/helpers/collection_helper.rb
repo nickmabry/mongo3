@@ -27,8 +27,8 @@ module CollectionHelper
   def orientation( value )
     return "id" if value.is_a?(Mongo::ObjectID)
     case( value.to_i )
-      when Mongo::ASCENDING  : "asc"
-      when Mongo::DESCENDING : "desc"
+      when Mongo::ASCENDING  then "asc"
+      when Mongo::DESCENDING then "desc"
       else                     "n/a"
     end
   end
